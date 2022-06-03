@@ -27,6 +27,7 @@ releaseWorkflow.file.addDeletionOverride('jobs.release_npm');
 releaseWorkflow.file.addOverride('jobs.release_golang.steps.8.run', `wget https://github.com/kichik/publib/archive/refs/heads/patch-1.tar.gz
 tar xzf patch-1.tar.gz
 cd publib-patch-1
+yarn
 npm run build
 sudo npm i -g dist/js/publib-0.0.0.tgz
 publib-golang`);
