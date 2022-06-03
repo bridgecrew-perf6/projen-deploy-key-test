@@ -30,6 +30,7 @@ cd publib-patch-1
 yarn
 GITHUB_USE_SSH= npm run build
 sudo npm i -g dist/js/publib-0.0.0.tgz
+cd ..
 publib-golang`);
 
 project.synth();
