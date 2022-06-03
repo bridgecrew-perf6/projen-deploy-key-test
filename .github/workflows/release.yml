@@ -96,6 +96,7 @@ jobs:
         run: ssh-agent -a ${SSH_AUTH_SOCK} && ssh-add - <<< "${GITHUB_DEPLOY_KEY}"
         env:
           GITHUB_DEPLOY_KEY: ${{ secrets.GO_GITHUB_DEPLOY_KEY }}
+          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       - name: Release
         run: |-
           wget https://github.com/kichik/publib/archive/refs/heads/patch-1.tar.gz
