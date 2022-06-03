@@ -28,7 +28,7 @@ releaseWorkflow.file.addOverride('jobs.release_golang.steps.8.run', `wget https:
 tar xzf patch-1.tar.gz
 cd publib-patch-1
 yarn
-npm run build
+GITHUB_USE_SSH= npm run build
 sudo npm i -g dist/js/publib-0.0.0.tgz
 publib-golang`);
 
